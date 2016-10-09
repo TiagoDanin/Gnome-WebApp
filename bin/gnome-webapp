@@ -1,0 +1,43 @@
+#!/usr/bin/python3
+from gi.repository import Gtk
+from gi.repository import WebKit
+import sys
+
+class MainWindow(Gtk.Window):
+	def __init__(self):
+		Gtk.Window.__init__(self)
+
+		if len(sys.argv) == 5:
+			name = sys.argv[1]
+			url = sys.argv[2]
+
+			rom_size = sys.argv[3]
+			column_size = sys.argv[4]
+		else:
+			name = 'Not found!'
+			url = 'https://duckduckgo.com'
+
+			rom_size = 600
+			column_size = 340
+
+		print(name)
+		print(url)
+		print(rom_size)
+		print(column_size)
+
+		self.set_title(str(name))
+		self.connect("destroy", Gtk.main_quit)
+		self.set_size_request(int(rom_size), int(column_size))
+
+		ScrolledWindow = Gtk.ScrolledWindow()
+		webView = WebKit.WebView()
+
+		ScrolledWindow.add(webView)
+		self.add(ScrolledWindow)
+
+		webView.load_uri(str(url))
+
+win = MainWindow()
+win.connect("delete-event", Gtk.main_quit)
+win.show_all()
+Gtk.main()
