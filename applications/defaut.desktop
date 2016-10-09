@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Name=__NAME__
+Comment=__COMMENT__
+Exec=/usr/bin/gnome-webapp __NAME__ __URL___ __rom_size__ __column_size__
+Icon=__ICON__
+Terminal=false
+Type=Application
+Categories=Network;

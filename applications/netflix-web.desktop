@@ -1,0 +1,11 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Name=Netflix Web
+Comment=Netflix - WebApp
+Exec=/usr/bin/gnome-webapp Netflix https://www.netflix.com "1200" "600"
+Icon=netflix
+Terminal=false
+Type=Application
+Categories=Network;
