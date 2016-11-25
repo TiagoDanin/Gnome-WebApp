@@ -10,6 +10,7 @@ applications['YoutubeTV'] = 'http://www.youtube.com/tv'
 applications['YoutubeGaming'] = 'https://gaming.youtube.com/'
 applications['Twitter'] = 'https://twitter.com/'
 applications['Outlook'] = 'http://outlook.com/'
+applications['Riot'] = 'https://riot.im/app/'
 
 for s in applications:
 	name = s
